@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>E-commerce Dashboard</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            width: 30%;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h2 {
+            color: #333;
+        }
+        .card p {
+            color: #777;
+        }
+        .card a {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+        .card a:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .nav-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to the E-commerce Dashboard</h1>
+        <p>Manage your store and keep track of orders, products, and users.</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Manage Products</h2>
+            <p>View, add, edit, and delete products in your store.</p>
+            <a href="/admin/products">Manage Products</a>
+        </div>
+
+        <div class="card">
+            <h2>Manage Orders</h2>
+            <p>Track and process all customer orders from here.</p>
+            <a href="/admin/orders">View Orders</a>
+        </div>
+
+        <div class="card">
+            <h2>Manage Users</h2>
+            <p>View and manage registered customers and their data.</p>
+            <a href="/admin/users">Manage Users</a>
+        </div>
+
+        <div class="card">
+            <h2>Analytics</h2>
+            <p>View store performance, sales reports, and analytics.</p>
+            <a href="/admin/analytics">View Reports</a>
+        </div>
+
+        <div class="card">
+            <h2>Account Settings</h2>
+            <p>Update your account details, password, and preferences.</p>
+            <a href="/account/settings">Settings</a>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="/login">Login</a> |
+        <a href="/register">Register</a> |
+        <a href="/logout">Logout</a>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 E-commerce Platform. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
